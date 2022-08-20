@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侘 寂 - Wabi-sabi Cafe</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+</head>
+<body>
+    <header>
+        <div>
+            <p class="logo-title">
+                Wabi-sabi
+            </p>
+            <img src="./assets/logo/UClogo.svg" alt="">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li>Home</li>
+                <li>Take a look</li>
+                <li>Products</li>
+            </ul>
+        </nav>
+        <div class="cartContainer">
+            <img src="./assets/accesories/cart-bag.svg" alt="">
+            <span class='cartCounter' id="cartCounter"></span>
+        </div>
+    </header>
+    <section class="section__landing">
+        <div class="wrapper">
+            <h2 class="mini-title">Wabi-sabi cafe</h2>
+            <h1>Take life<br>one sip<br>at a time.</h1>
+            <p>Wabi-sabi (侘 寂): in japanese culture, refers to a world view centered on finding beauty within the imperfections of life and peacefully accepting the natural cycle of growth and decay. </p>
+            <img src="./assets/images/coffeewaterm.svg" alt="">
+        </div>
+    </section>
+    <section class="section__facility">
+        <div class="wrapper">
+            <div class="carrousel">
+                <div class="slider" id="slider">
+                    <img src="./assets/images/carrouselimgs/carr4.svg" alt="">
+                    <img src="./assets/images/carrouselimgs/carr1.svg" alt="">
+                    <img src="./assets/images/carrouselimgs/carr3.svg" alt="">
+                    <img src="./assets/images/carrouselimgs/carr2.svg" alt="">
+                </div>
+                <div>
+                    <ul class="slider__buttons-ul">
+                        <li class="slider__button active" id="sliderButton"></li>
+                        <li class="slider__button" id="sliderButton"></li>
+                        <li class="slider__button" id="sliderButton"></li>
+                        <li class="slider__button" id="sliderButton"></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h2>
+                    Our corners.
+                </h2>
+                <p>
+                    We hope our spaces help you replace all your worries with the pleasant smell and taste of our coffee varieties.
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="./javascript/landing.js"></script>
+</body>
+</html>
