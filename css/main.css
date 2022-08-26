@@ -785,15 +785,19 @@ header .toggler {
     align-items: center;
     padding: 2.5rem;
   }
+  .productModal .productModalContent .productModalBottomDiv .descriptDiv h2 {
+    text-align: center;
+  }
   .productModal .productModalContent .productModalBottomDiv .descriptDiv .addlBtn {
     margin-bottom: auto;
   }
-  .productModal .productModalContent .productModalBottomDiv .descriptDiv .price {
-    padding: 1rem 0;
+  .productModal .productModalContent .productModalBottomDiv .descriptDiv .productModalPrice {
+    padding: 1rem 0 0 0;
     font-size: 2.5rem;
   }
-  .productModal .productModalContent .productModalBottomDiv .descriptDiv .descript {
+  .productModal .productModalContent .productModalBottomDiv .descriptDiv .productModalDescript {
     padding: 1rem 0;
+    text-align: center;
   }
   .cartModal .cartModalContent {
     width: 95%;

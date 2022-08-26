@@ -76,7 +76,7 @@ function addCards(stock) {
         card.innerHTML = `
                             <img src=${product.img} alt="">
                             <h3>${product.title}</h3>
-                            <p>${product.descript}.<br>Origin: ${product.origin}.</p>
+                            <p>${product.descript}<br>Origin: ${product.origin}.</p>
                             <button class='openModalBtn'>See more</button>
                         `
         productContainer.appendChild(card);
@@ -102,7 +102,7 @@ function showProductModal(product) {
                                         <h2>${product.title}</h3>
                                         <h3>${product.subtitle}</h3>
                                         <p class="productModalPrice">${'$ ' + product.price}</p>
-                                        <p class="productModalDescript">${product.descript}.<br>Origin: ${product.origin}.</p>
+                                        <p class="productModalDescript">${product.descript}<br>Origin: ${product.origin}.</p>
                                         <button class="addBtn" id='addBtn'> Add to cart</button>
                                     </div> 
                                 </div>
