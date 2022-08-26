@@ -392,6 +392,13 @@ header .toggler {
   }
 }
 @media screen and (max-width: 470px) {
+  .section__landing .wrapper {
+    justify-content: flex-start;
+    padding-top: 5rem;
+  }
+  .section__landing .wrapper img {
+    right: 2rem;
+  }
   .section__landing .wrapper .mini-title {
     display: inline-block;
     font-size: 1.75rem;
