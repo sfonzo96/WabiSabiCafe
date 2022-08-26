@@ -97,7 +97,7 @@
     padding: 0 2rem;
   }
   .section__facility .wrapper .carousel {
-    width: clamp(20rem, 30%, 22rem);
+    width: 25rem;
     margin: auto;
   }
 }
@@ -806,6 +806,9 @@ header .toggler {
   }
   .section__shop .wrapper #productContainer {
     padding: 1rem;
+  }
+  .section__shop .wrapper input {
+    width: 55%;
   }
 }
 * {

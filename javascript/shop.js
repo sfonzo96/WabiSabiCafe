@@ -1,6 +1,7 @@
 const productContainer = document.getElementById('productContainer');
 const productModal = document.getElementById('productModal');
 const cartModal = document.getElementById('cartModal');
+const searchInput = document.getElementById('searchInput');
 const stock = [];
 const cart = []; 
 const parsedStock = [];
@@ -75,7 +76,7 @@ function addCards(stock) {
         card.innerHTML = `
                             <img src=${product.img} alt="">
                             <h3>${product.title}</h3>
-                            <p>${product.descript}.<br>Origen: ${product.origin}.</p>
+                            <p>${product.descript}.<br>Origin: ${product.origin}.</p>
                             <button class='openModalBtn'>See more</button>
                         `
         productContainer.appendChild(card);
@@ -101,7 +102,7 @@ function showProductModal(product) {
                                         <h2>${product.title}</h3>
                                         <h3>${product.subtitle}</h3>
                                         <p class="productModalPrice">${'$ ' + product.price}</p>
-                                        <p class="productModalDescript">${product.descript}.<br>Origen: ${product.origin}.</p>
+                                        <p class="productModalDescript">${product.descript}.<br>Origin: ${product.origin}.</p>
                                         <button class="addBtn" id='addBtn'> Add to cart</button>
                                     </div> 
                                 </div>
@@ -115,8 +116,6 @@ function showProductModal(product) {
             cart.push(product);
         }
         product.amountInCart++;
-        console.log(cart);
-        console.log(stock);
         renderProductsInCart();
         cartCount();
         productModal.classList.toggle('active');
@@ -171,7 +170,6 @@ function cartCount() {
 function renderProductsInCart() {
     const cartProductsContainer = document.getElementById('cartProductsContainer');
     cartProductsContainer.innerHTML = '';
-    console.log('asd')
     cart.forEach(product => {
         renderProduct(product, cartProductsContainer);
     });
@@ -226,8 +224,28 @@ function loadCart() {
     }
 } // Carga stock desde local storage y define carrito en funcion del mismo.
 
+function addSearchFunction() {
+    searchInput.addEventListener('input', () => {
+        if (searchInput.value.length >= 1) {
+            const searchResults = stock.filter(product => {
+                const keywords = product.keywords;
+                const searchText = searchInput.value.toLowerCase();
+                return keywords.includes(searchText);
+            })
+            productContainer.innerHTML = '';
+            addCards(searchResults);
+            addProductModalEvnt(searchResults)
+        } else {
+            productContainer.innerHTML = '';
+            addCards(stock);
+            addProductModalEvnt(stock);
+        }
+    })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     renderShop();
+    addSearchFunction();
     loadCart();
     cartCount();
     renderCartModal();

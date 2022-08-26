@@ -1,56 +1,62 @@
 [
     {
-        "title": "Coffee 1",
+        "title": "Brazilian blend",
         "subtitle": "this is a subtitle",
-        "descript": "Tastiest",
+        "descript": "This is a robusta coffee blend. Characterized by it's bitterness, it's chocolate flavor and it's high caffeine amount.",
+        "origin": "Brasil",
+        "price": "5",
+        "img": "../assets/images/coffeemodels/coffee1.webp",
+        "amountInCart": 0,
+        "keywords": "brazil brazilian coffee chocolate high caffeine bitter robusta blend"
+    },
+    {
+        "title": "Vietnamese robusta",
+        "subtitle": "this is a subtitle",
+        "descript": "This is a robusta coffee. Characterized by it's bitterness, it's chocolate flavor and it's high caffeine amount.",
+        "origin": "Vietnam",
+        "price": "6",
+        "img": "../assets/images/coffeemodels/coffee2.webp",
+        "amountInCart": 0,
+        "keywords": "vietnam vietnamese coffee chocolate high caffeine bitter robusta"
+    },
+    {
+        "title": "Colombian blend",
+        "subtitle": "this is a subtitle",
+        "descript": "This is a arabiga coffee blend. Characterized by it's low acidity, it's soft flavor and balanced caffeine amount.",
+        "origin": "Colombia",
+        "price": "8",
+        "img": "../assets/images/coffeemodels/coffee3.webp",
+        "amountInCart": 0,
+        "keywords": "colombia colombian coffee soft acidity balanced low blend arabiga"
+    },
+    {
+        "title": "Brazilian arabiga",
+        "subtitle": "this is a subtitle",
+        "descript": "This is a arabiga coffee. Characterized by it's low acidity, it's soft flavor and balanced caffeine amount.",
         "origin": "Brasil",
         "price": "10",
         "img": "../assets/images/coffeemodels/coffee1.webp",
-        "amountInCart": 0
+        "amountInCart": 0,
+        "keywords": "brazil brazilian coffee chocolate high caffeine bitter arabiga"
     },
     {
-        "title": "Coffee 2",
+        "title": "Vietnamese blend",
         "subtitle": "this is a subtitle",
-        "descript": "Tastier than 3",
-        "origin": "Kenya",
-        "price": "9",
+        "descript": "This is a robusta coffee blend. Characterized by it's bitterness, it's chocolate flavor and it's high caffeine amount.",
+        "origin": "Vietnam",
+        "price": "7",
         "img": "../assets/images/coffeemodels/coffee2.webp",
-        "amountInCart": 0
+        "amountInCart": 0,
+        "keywords": "vietnam vietnamese coffee chocolate high caffeine bitter robusta blend"
     },
     {
-        "title": "Coffee 3",
+        "title": "Colombian arabiga",
         "subtitle": "this is a subtitle",
-        "descript": "Not the best",
+        "descript": "This is a arabiga coffee. Characterized by it's low acidity, it's soft flavor and balanced caffeine amount.",
         "origin": "Colombia",
-        "price": "5",
-        "img": "../assets/images/coffeemodels/coffee3.webp",
-        "amountInCart": 0
-    },
-    {
-        "title": "Coffee 1",
-        "subtitle": "this is a subtitle",
-        "descript": "Tastiest",
-        "origin": "Brasil",
-        "price": "10",
-        "img": "../assets/images/coffeemodels/coffee1.webp",
-        "amountInCart": 0
-    },
-    {
-        "title": "Coffee 2",
-        "subtitle": "this is a subtitle",
-        "descript": "Tastier than 3",
-        "origin": "Kenya",
         "price": "9",
-        "img": "../assets/images/coffeemodels/coffee2.webp",
-        "amountInCart": 0
-    },
-    {
-        "title": "Coffee 3",
-        "subtitle": "this is a subtitle",
-        "descript": "Not the best",
-        "origin": "Colombia",
-        "price": "5",
         "img": "../assets/images/coffeemodels/coffee3.webp",
-        "amountInCart": 0
+        "amountInCart": 0,
+        "keywords": "colombia colombian coffee soft acidity balanced low arabiga"
     }
 ]
