@@ -24,10 +24,9 @@ function cartBtnEvnts() {
         button.addEventListener('click', (e) => {
             cart[index].amountInCart--;
             if (cart[index].amountInCart < 1) {
-                e.target.parentElement.parentElement.parentElement.remove()
                 cart.splice(index, 1);
+                renderProductsInCart();
             } else e.target.parentElement.parentElement.querySelector('.pAmount').innerHTML = cart[index].amountInCart;
-            renderProductsInCart();
             cartCount();
             storeInLS();
         })
@@ -37,7 +36,7 @@ function cartBtnEvnts() {
         button.addEventListener('click', (e) => {
             cart[index].amountInCart = 0;
             cart.splice(index,1);
-            e.target.parentElement.remove();
+            renderProductsInCart();
             cartCount();
             storeInLS();
         })
@@ -172,6 +171,7 @@ function cartCount() {
 function renderProductsInCart() {
     const cartProductsContainer = document.getElementById('cartProductsContainer');
     cartProductsContainer.innerHTML = '';
+    console.log('asd')
     cart.forEach(product => {
         renderProduct(product, cartProductsContainer);
     });
@@ -226,7 +226,7 @@ function loadCart() {
     }
 } // Carga stock desde local storage y define carrito en funcion del mismo.
 
-document.addEventListener('DOMContentLoaded',   () => {
+document.addEventListener('DOMContentLoaded', () => {
     renderShop();
     loadCart();
     cartCount();
