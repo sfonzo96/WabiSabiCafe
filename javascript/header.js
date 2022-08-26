@@ -3,6 +3,7 @@ const navUl = document.getElementById('navUl');
 const navLinks = document.querySelectorAll('.navLink');
 const footerLinks = document.querySelectorAll('.footerLink'); 
 const scrollToElements = [document.getElementById('landingSection'), document.getElementById('facilitySection'), document.getElementById('shopSection')];
+const logoContainer = document.getElementById('logoContainer');
 
 function toggleMenu() {
     navUl.classList.toggle('hidden');
@@ -41,3 +42,5 @@ footerLinks.forEach((link , index) => {
             break;
     }
 });
+
+logoContainer.addEventListener('click', () => scrollToElements[0].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }));

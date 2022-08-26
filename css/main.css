@@ -211,6 +211,7 @@ header div:first-child {
   font-size: 4rem;
   align-items: center;
   gap: 1.5rem;
+  cursor: pointer;
 }
 header div:first-child p {
   margin: 0;
