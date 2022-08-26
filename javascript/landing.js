@@ -13,8 +13,4 @@ sliderButton.forEach((button, index) => {
         
         button.classList.add('active');
     })
-
-
-})
-
-
+});

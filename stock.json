@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Coffee 1",
+        "subtitle": "this is a subtitle",
+        "descript": "Tastiest",
+        "origin": "Brasil",
+        "price": "10",
+        "img": "../assets/images/coffeemodels/coffee1.webp",
+        "amountInCart": 0
+    },
+    {
+        "title": "Coffee 2",
+        "subtitle": "this is a subtitle",
+        "descript": "Tastier than 3",
+        "origin": "Kenya",
+        "price": "9",
+        "img": "../assets/images/coffeemodels/coffee2.webp",
+        "amountInCart": 0
+    },
+    {
+        "title": "Coffee 3",
+        "subtitle": "this is a subtitle",
+        "descript": "Not the best",
+        "origin": "Colombia",
+        "price": "5",
+        "img": "../assets/images/coffeemodels/coffee3.webp",
+        "amountInCart": 0
+    },
+    {
+        "title": "Coffee 1",
+        "subtitle": "this is a subtitle",
+        "descript": "Tastiest",
+        "origin": "Brasil",
+        "price": "10",
+        "img": "../assets/images/coffeemodels/coffee1.webp",
+        "amountInCart": 0
+    },
+    {
+        "title": "Coffee 2",
+        "subtitle": "this is a subtitle",
+        "descript": "Tastier than 3",
+        "origin": "Kenya",
+        "price": "9",
+        "img": "../assets/images/coffeemodels/coffee2.webp",
+        "amountInCart": 0
+    },
+    {
+        "title": "Coffee 3",
+        "subtitle": "this is a subtitle",
+        "descript": "Not the best",
+        "origin": "Colombia",
+        "price": "5",
+        "img": "../assets/images/coffeemodels/coffee3.webp",
+        "amountInCart": 0
+    }
+]

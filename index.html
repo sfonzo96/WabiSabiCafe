@@ -1,86 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>侘 寂 - Wabi-sabi Cafe</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <script src="https://kit.fontawesome.com/a4c8bd0e80.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header>
-        <div>
-            <p class="logo-title">
-                Wabi-sabi
-            </p>
-            <img src="./assets/logo/UClogo.svg" alt="">
-        </div>
-        <nav class="nav">
-            <ul id="navUl" class="hidden">
-                <li class="navLink">Home</li>
-                <li class="navLink">Take a look</li>
-                <li class="navLink">Products</li>
-                <div id="navToggler" class="toggler">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </div>
-            </ul>
-        </nav>
-        <div class="cartContainer">
-            <img src="./assets/accesories/cart-bag.svg" alt="">
-            <span class='cartCounter' id="cartCounter"></span>
-        </div>
-    </header>
-    <section class="section__landing">
-        <div class="wrapper">
-            <h2 class="mini-title">Wabi-sabi cafe</h2>
-            <h1>Take life<br>one sip<br>at a time.</h1>
-            <p>Wabi-sabi (侘 寂): in japanese culture, refers to a world view centered on finding beauty within the imperfections of life and peacefully accepting the natural cycle of growth and decay. </p>
-            <img src="./assets/images/coffeewaterm.svg" alt="">
-        </div>
-    </section>
-    <section class="section__facility">
-        <div class="wrapper">
-            <div class="carrousel">
-                <div class="slider" id="slider">
-                    <img src="./assets/images/carrouselimgs/carr4.svg" alt="">
-                    <img src="./assets/images/carrouselimgs/carr1.svg" alt="">
-                    <img src="./assets/images/carrouselimgs/carr3.svg" alt="">
-                    <img src="./assets/images/carrouselimgs/carr2.svg" alt="">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>侘 寂 - Wabi-sabi Cafe</title>
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <script src="https://kit.fontawesome.com/a4c8bd0e80.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <p class="logo-title">
+                    Wabi-sabi
+                </p>
+                <img src="./assets/logo/WSClogo.svg" alt="">
+            </div>
+            <nav class="nav">
+                <ul id="navUl" class="hidden">
+                    <li class="navLink">Home</li>
+                    <li class="navLink">Take a look</li>
+                    <li class="navLink">Products</li>
+                    <div id="navToggler" class="toggler">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                </ul>
+            </nav>
+            <div class="cartBtnContainer" id="cartBtnContainer">
+                <img src="./assets/accesories/cart-bag.svg" alt="">
+                <span class='cartCounter' id="cartCounter"></span>
+            </div>
+        </header>
+        <section class="section__landing" id="landingSection">
+            <div class="wrapper">
+                <h2 class="mini-title">Wabi-sabi cafe</h2>
+                <h1>Take life<br>one sip<br>at a time.</h1>
+                <p>Wabi-sabi (侘 寂): in japanese culture, refers to a world view centered on finding beauty within the imperfections of life and peacefully accepting the natural cycle of growth and decay. </p>
+                <img src="./assets/images/coffeewaterm.svg" alt="">
+            </div>
+        </section>
+        <section class="section__facility" id="facilitySection">
+            <div class="wrapper">
+                <div class="carousel">
+                    <div class="slider" id="slider">
+                        <img src="./assets/images/carouselimgs/carr4.svg" alt="">
+                        <img src="./assets/images/carouselimgs/carr1.svg" alt="">
+                        <img src="./assets/images/carouselimgs/carr3.svg" alt="">
+                        <img src="./assets/images/carouselimgs/carr2.svg" alt="">
+                    </div>
+                    <div>
+                        <ul class="slider__buttons-ul">
+                            <li class="slider__button active" id="sliderButton"></li>
+                            <li class="slider__button" id="sliderButton"></li>
+                            <li class="slider__button" id="sliderButton"></li>
+                            <li class="slider__button" id="sliderButton"></li>
+                        </ul>
+                    </div>
                 </div>
                 <div>
-                    <ul class="slider__buttons-ul">
-                        <li class="slider__button active" id="sliderButton"></li>
-                        <li class="slider__button" id="sliderButton"></li>
-                        <li class="slider__button" id="sliderButton"></li>
-                        <li class="slider__button" id="sliderButton"></li>
-                    </ul>
+                    <h2>
+                        Our spaces.
+                    </h2>
+                    <p>
+                        We hope every space on our facilities helps you replace all your worries with the pleasant smell and taste of our amazing coffee varieties.
+                    </p>
                 </div>
             </div>
-            <div>
-                <h2>
-                    Our spaces.
-                </h2>
-                <p>
-                    We hope every space on our facilities helps you replace all your worries with the pleasant smell and taste of our amazing coffee varieties.
-                </p>
+        </section>
+        <section class="section__shop" id="shopSection">
+            <div class="wrapper">
+                <h2>Pick your joy.</h2>
+                <select name="" id=""></select>
+                <input type="text" placeholder="Colombian coffee...">
+                <div id="productContainer"></div>
             </div>
+        </section>
+        <footer>
+            <div class="footer__div-sup">
+                <div class="footer__nav">
+                    <h3>Navigate</h3>
+                    <ul>
+                        <li class="footerLink">Home</li>
+                        <li class="footerLink">Our spaces</li>
+                        <li class="footerLink">Products</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="footer__dev">
+                    <h3>Santiago Fonzo</h3>
+                    <p>Desarrollador front-end trainee</p>
+                </div>
+                <hr>
+                <div class="footer__contact">
+                    <h3>Contacto</h3>
+                    <a href="https://www.linkedin.com/in/santiagofonzo/" target="_blank"><i class="fa-brands fa-linkedin fa-4x" alt='linkedIn link'></i></a>
+                </div>
+            </div>
+            <small>© Copyright 2022, Santiago Fonzo. Todos los derechos reservados </small>
+        </footer>
+        </footer>
+        <div id="productModal" class="productModal"></div>
+        <div id="cartModal" class="cartModal">
         </div>
-    </section>
-    <footer>
-        <div class="footer__div-sup">
-            <div>About the dev</div>
-            <ul>
-                <li>Home</li>
-                <li>Our spaces</li>
-                <li>Products</li>
-            </ul>
-            <div>Stay updated by joining our mail-list!</div>
-        </div>
-        <small>Copyright</small>
-    </footer>
-    <script src="./javascript/header.js"></script>
-    <script src="./javascript/landing.js"></script>
-</body>
+        <script src="./javascript/header.js"></script>
+        <script src="./javascript/landing.js"></script>
+        <script src="./javascript/shop.js"></script>
+    </body>
 </html>
