@@ -391,13 +391,13 @@ header .toggler {
     bottom: 10rem;
   }
 }
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 670px) {
   .section__landing .wrapper {
     justify-content: flex-start;
-    padding-top: 5rem;
+    padding-top: 10rem;
   }
   .section__landing .wrapper img {
-    right: 2rem;
+    right: 4rem;
   }
   .section__landing .wrapper .mini-title {
     display: inline-block;
