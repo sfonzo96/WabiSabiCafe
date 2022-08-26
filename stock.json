@@ -22,7 +22,7 @@
     {
         "title": "Colombian blend",
         "subtitle": "this is a subtitle",
-        "descript": "This is a arabiga coffee blend. Characterized by it's low acidity, it's soft flavor and balanced caffeine amount.",
+        "descript": "This is an arabiga coffee blend. Characterized by it's low acidity, it's soft flavor and balanced caffeine amount.",
         "origin": "Colombia",
         "price": "8",
         "img": "../assets/images/coffeemodels/coffee3.webp",
@@ -32,7 +32,7 @@
     {
         "title": "Brazilian arabiga",
         "subtitle": "this is a subtitle",
-        "descript": "This is a arabiga coffee. Characterized by it's low acidity, it's soft flavor and balanced caffeine amount.",
+        "descript": "This is an arabiga coffee. Characterized by it's low acidity, it's soft flavor and balanced caffeine amount.",
         "origin": "Brasil",
         "price": "10",
         "img": "../assets/images/coffeemodels/coffee1.webp",
@@ -52,7 +52,7 @@
     {
         "title": "Colombian arabiga",
         "subtitle": "this is a subtitle",
-        "descript": "This is a arabiga coffee. Characterized by it's low acidity, it's soft flavor and balanced caffeine amount.",
+        "descript": "This is an arabiga coffee. Characterized by it's low acidity, it's soft flavor and balanced caffeine amount.",
         "origin": "Colombia",
         "price": "9",
         "img": "../assets/images/coffeemodels/coffee3.webp",
