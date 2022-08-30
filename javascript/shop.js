@@ -6,11 +6,41 @@ const stock = [];
 const cart = []; 
 const parsedStock = [];
 
-function cartBtnEvnts() {
+function addEmptyCartEvnt() {
+    const emptyCartButton = document.getElementById('emptyCart');
+
+    emptyCartButton.addEventListener('click', (e) => {
+        cart.splice(0, cart.length);
+        stock.forEach(product => product.amountInCart = 0);
+        e.target.parentElement.querySelector('.cartProductsContainer').innerHTML = '';
+        cartCount();
+        localStorage.clear();
+        console.log('working')
+        Toastify({
+            text: `Cart was emptied.`,
+            duration: 2000,
+            newWindow: false,
+            close: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+              background: "#EFE5DD",
+              color: "#351817",
+              border: ".05rem solid #5C3018"
+            },
+            offset: {
+                y: "9rem" 
+            },
+            oldestFirst: true,
+        }).showToast();
+    });
+}
+
+function productsCartBtnEvnts() {
     const sum1ToCartButtons = document.querySelectorAll('.sum1ToCart');
     const rest1FromCartButtons = document.querySelectorAll('.rest1FromCart');
     const deleteFromCartButtons = document.querySelectorAll('.deleteFromCart');
-    const emptyCartButton = document.getElementById('emptyCart');
 
     sum1ToCartButtons.forEach((button,index) => {
         button.addEventListener('click', (e) => {
@@ -36,22 +66,30 @@ function cartBtnEvnts() {
     deleteFromCartButtons.forEach((button,index) => {
         button.addEventListener('click', (e) => {
             cart[index].amountInCart = 0;
+            Toastify({
+                text: `${cart[index].title} was deleted from the cart.`,
+                duration: 2000,
+                newWindow: false,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                  background: "#EFE5DD",
+                  color: "#351817",
+                  border: ".05rem solid #5C3018"
+                },
+                offset: {
+                    y: "9rem" 
+                },
+                oldestFirst: true,
+            }).showToast();
             cart.splice(index,1);
             renderProductsInCart();
             cartCount();
             storeInLS();
         })
     });
-
-    emptyCartButton.addEventListener('click', (e) => {
-        cart.splice(0, cart.length);
-        stock.forEach(product => product.amountInCart = 0);
-        e.target.parentElement.querySelector('.cartProductsContainer').innerHTML = '';
-        cartCount();
-        stock.forEach(product => product.amountInCart = 0);
-        localStorage.clear();
-    });
-
 }; //Incorpora eventos a botones de carrito: suma, resta, eliminacion y vaciado
 
 function renderShop() {
@@ -120,6 +158,24 @@ function showProductModal(product) {
         cartCount();
         productModal.classList.toggle('active');
         storeInLS();
+        Toastify({
+            text: `${product.title} was addded to the cart!`,
+            duration: 2000,
+            newWindow: false,
+            close: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "#EFE5DD",
+              color: "#351817",
+              border: ".05rem solid #5C3018"
+            },
+            offset: {
+                y: "9rem" 
+            },
+            oldestFirst: true,
+        }).showToast();
     }
 )}; // Renderiza y muestra modal de producto
 
@@ -158,6 +214,7 @@ function renderCartModal() {
     cartModal.appendChild(cartModalContent);
     addCloseModal('.cartModalGoBack', cartModal, '.cartModalContent');
     renderProductsInCart();
+    addEmptyCartEvnt()
 }; // Renderiza modal vacio (una vez al cargar sitio o cada vez que se abra modal?)
 
 function cartCount() {
@@ -173,7 +230,7 @@ function renderProductsInCart() {
     cart.forEach(product => {
         renderProduct(product, cartProductsContainer);
     });
-    cartBtnEvnts();
+    productsCartBtnEvnts();
 }; // Junto con renderProduct renderiza todos los productos en carrito
 
 function renderProduct(product, cartProductsContainer) {
