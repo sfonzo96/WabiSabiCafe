@@ -10,13 +10,27 @@ function addEmptyCartEvnt() {
     const emptyCartButton = document.getElementById('emptyCart');
 
     emptyCartButton.addEventListener('click', (e) => {
-        cart.splice(0, cart.length);
-        stock.forEach(product => product.amountInCart = 0);
-        e.target.parentElement.querySelector('.cartProductsContainer').innerHTML = '';
-        cartCount();
-        localStorage.clear();
-        console.log('working')
-        Toastify({
+        if (cart.length === 0) {
+            Toastify({
+                text: `Cart's already empty!`,
+                duration: 2000,
+                newWindow: false,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                  background: "#EFE5DD",
+                  color: "#351817",
+                  border: ".05rem solid #5C3018"
+                },
+                offset: {
+                    y: "9rem" 
+                },
+                oldestFirst: true,
+            }).showToast();
+        }else {
+            Toastify({
             text: `Cart was emptied.`,
             duration: 2000,
             newWindow: false,
@@ -33,9 +47,14 @@ function addEmptyCartEvnt() {
                 y: "9rem" 
             },
             oldestFirst: true,
-        }).showToast();
+        }).showToast();}
+        cart.splice(0, cart.length);
+        stock.forEach(product => product.amountInCart = 0);
+        e.target.parentElement.querySelector('.cartProductsContainer').innerHTML = '';
+        cartCount();
+        localStorage.clear();
     });
-}
+} // Agrega evento de vaciado de carrito
 
 function productsCartBtnEvnts() {
     const sum1ToCartButtons = document.querySelectorAll('.sum1ToCart');
@@ -90,7 +109,7 @@ function productsCartBtnEvnts() {
             storeInLS();
         })
     });
-}; //Incorpora eventos a botones de carrito: suma, resta, eliminacion y vaciado
+}; //Incorpora eventos a botones de carrito: suma, resta, eliminacion
 
 function renderShop() {
     if (!JSON.parse(localStorage.getItem('stockLS'))) {
