@@ -851,4 +851,8 @@ body {
 
 .toast-close {
   color: #351817;
+}
+
+.toastify {
+  box-shadow: 0 0.3rem 0.6rem -0.1rem rgba(0, 0, 0, 0.12), 0 1rem 3.6rem -0.4rem rgba(92, 48, 24, 0.3);
 }/*# sourceMappingURL=main.css.map */
